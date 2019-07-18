@@ -1,0 +1,4 @@
+galaxy_info:
+  role_name: new-user
+  author: Konrad Sala
+  description: Ansible role to add new user

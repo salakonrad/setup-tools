@@ -1,0 +1,12 @@
+---
+# tasks file for ssl-certs
+- name: copy certs to remote
+  copy:
+    src: "{{ item }}"
+    dest: /etc/pki/ca-trust/source/anchors/
+  with_fileglob:
+    - "{{ role_path }}/files/*"
+#    - "/home/ksala/setup-tools/ssl-certs/files/*"
+
+- name: update ca-trust
+  command: update-ca-trust

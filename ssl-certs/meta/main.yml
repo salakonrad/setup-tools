@@ -1,0 +1,4 @@
+galaxy_info:
+  role_name: ssl-certs
+  author: Konrad Sala
+  description: Ansible role to install ssl certs
