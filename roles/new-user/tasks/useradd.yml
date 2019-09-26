@@ -3,8 +3,9 @@
 
 - name: Create users with home directory
   user: 
-    name: '{{ item.username }}'
-    shell: /bin/bash
+    name: '{{ item.username }}' #testPass
+    #password: $6$mysecretsalt$fW/zAIUL5i/w52EBBLAB4KjnR9YLyVhglW0XxECBTUTL6eYg3Eixq92rUXR680EyOoccOzQAR2.by8ITrniJm.
+    shell: /bin/bash 
     createhome: yes
     state: present
   with_items: '{{users}}'

@@ -1,9 +1,9 @@
 ---
 - import_tasks: useradd.yml
-  tags: [add]
+  tags: [useradd]
 
 - import_tasks: userdel.yml
-  tags: [delete]
+  tags: [userdel]
 
 - import_tasks: visudo.yml
   tags: [nosudopass]
