@@ -3,5 +3,10 @@
   remote_user: ksala
   become: yes
   become_method: sudo
-  roles:
-    - { role: new-user }
+
+  tasks:
+    - import_role:
+        name: new-user
+
+  vars:
+    users: { "username": "amg", "sudo": false, "nosudopass": false }

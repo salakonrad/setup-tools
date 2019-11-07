@@ -1,14 +1,9 @@
 ---
 - import_tasks: useradd.yml
-  tags: [useradd]
+  tags: [never,useradd]
 
 - import_tasks: userdel.yml
-  tags: [userdel]
-
-- import_tasks: visudo.yml
-  tags: [nosudopass]
+  tags: [never,userdel]
 
 - import_tasks: prompt.yml
-  tags: [prompt]
-
-- include_vars: users.yml
+  tags: [never,prompt]
