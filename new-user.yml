@@ -5,8 +5,20 @@
   become_method: sudo
 
   tasks:
-    - import_role:
-        name: new-user
+    - include_vars: users.yml
+      tags: always
 
-  vars:
-    users: { "username": "amg", "sudo": false, "nosudopass": false }
+    - name: Add | Del user
+      include_role:
+        name: new-user
+      with_items: "{{ userlist }}"
+      loop_control:
+        loop_var: users
+      tags: [never,useradd,userdel,prompt]
+
+#      loop:
+#        - username: amg
+#          use_sudo: no
+#        - username: amg2
+#      loop_control:
+#        loop_var: users
