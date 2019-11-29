@@ -1,0 +1,8 @@
+---
+userlist:
+  - username: amg
+    sudo: no
+    nosudopass: no
+  - username: amg2
+    sudo: yes
+    nosudopass: no
